@@ -45,4 +45,4 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 ```
 
 > about link
-> 1. [Anaconda安装/使用](Ubuntu安装&使用anaconda)
+> 1. [Anaconda安装/使用](Ubuntu%E5%AE%89%E8%A3%85%26%E4%BD%BF%E7%94%A8anaconda.md)
