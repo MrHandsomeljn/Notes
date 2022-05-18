@@ -36,7 +36,7 @@ conda config --set show_channel_urls yes
 conda install -c [源] [包名]
 ```
 
-推荐源
+几个推荐的源
 
 ```sh
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
