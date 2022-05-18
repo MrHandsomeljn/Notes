@@ -44,3 +44,5 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
 ```
 
+> about link
+> 1. [Anaconda安装/使用](Ubuntu安装&使用anaconda)

@@ -1,10 +1,10 @@
-## linux-anaconda
+## ubuntu安装/使用anaconda
 
 anaconda安装：
 
-- 有权限
-
-- 无权限
+- 有su权限
+  - 没啥好说的
+- 无su权限
 
   ```sh
   #1. 下载Anaconda3-xxxx.xx-Linux-x86_64.sh
@@ -57,7 +57,9 @@ pip install -r requirements.txt
 ```sh
 conda info --envs	#查看包位置
 tar -cvf [] #打包
-#传输
+#传输打包好的文件
 tar -xvf []	#解包
 ```
 
+> about link
+> 1. [Anaconda源相关](Anaconda源相关.md)
