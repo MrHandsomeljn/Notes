@@ -10,16 +10,22 @@ anaconda安装：
   #1. 下载Anaconda3-xxxx.xx-Linux-x86_64.sh
   #2. 运行
   bash Anaconda3-xxxx.xx-Linux-x86_64.sh
+  
   #3. 若发现conda: command not found
   vim ~/.bashrc
   #i输入模式
-  export PATH="/xxx/anaconda3/bin:$PATH"
+  export PATH="/[路径]/anaconda3/bin:$PATH"
   #:wq保存并退出
   #刷新bashrc
   . ~/.bashrc
   ```
 
-查看conda安装位置
+安装忘了activate/服务器需要手动开启conda
+```sh
+. [路径]/anaconda3/bin/activate
+```
+
+查看conda包的位置
 
 ```sh
 conda info --envs
@@ -62,4 +68,4 @@ tar -xvf []	#解包
 ```
 
 > about link
-> 1. [Anaconda源相关](Anaconda源相关.md)
+> 1. [anaconda-安装源](anaconda-安装源.md)
