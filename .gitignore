@@ -1,1 +1,3 @@
-autogit.bat
+autoPush.bat
+autoPull.bat
+.gitignore
