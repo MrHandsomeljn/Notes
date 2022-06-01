@@ -4,7 +4,6 @@ import time
 import tkinter as tk
 import tkinter.messagebox
 
-from click import command
 NotesDirectoryPath = "E:/Codes/Notes"
 TyporaPath = "C:/Program Files/Typora"
 
@@ -48,14 +47,19 @@ class getcommit(tk.Toplevel):
 		row1.pack(fill="x")
 		l1 = tk.Label(row1, text="Commit here:",height=2,width=10)
 		l1.pack(side=tk.LEFT)  # 这里的side可以赋值为LEFT  RTGHT TOP  BOTTOM
-		self.xls_text = tk.StringVar()
-		ent1 = tk.Entry(row1, textvariable=self.xls_text)
-		ent1.pack(side=tk.RIGHT)
-		ent1.bind("<Return>", self.submit)
+
+		
 		row2 = tk.Frame(self)
 		row2.pack(fill="x")
-		tk.Button(row2, text="确认", command=self.on_click_yes).pack(side=tk.LEFT)
-		tk.Button(row2, text="取消", command=self.on_click_no).pack(side=tk.RIGHT)
+		self.xls_text = tk.StringVar()
+		ent1 = tk.Entry(row2, textvariable=self.xls_text)
+		ent1.pack(side=tk.RIGHT)
+		ent1.bind("<Return>", self.submit)
+
+		row3 = tk.Frame(self)
+		row3.pack(fill="x")
+		tk.Button(row3, text="确认", command=self.on_click_yes).pack(side=tk.LEFT)
+		tk.Button(row3, text="取消", command=self.on_click_no).pack(side=tk.RIGHT)
 
 		pass
 
@@ -75,7 +79,11 @@ class getcommit(tk.Toplevel):
 		self.on_click_yes()
 
 app = getcommit()
-app.wm_attributes('-topmost',1)
+app.protocol("WM_DELETE_WINDOW", app.on_click_no)
+app.withdraw()
+app.deiconify()
+#app.attributes("-topmost", True)
+#app.after(0, lambda: root.attributes("-topmost", False))
 app.mainloop()
 
 if needCommit:
