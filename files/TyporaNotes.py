@@ -42,29 +42,40 @@ class getcommit(tk.Toplevel):
 		super().__init__()
 		self.title("Commit")
 		self.setupUI()
+	
 	def setupUI(self):
 		row1 = tk.Frame(self)
 		row1.pack(fill="x")
 		l1 = tk.Label(row1, text="Commit here:",height=2,width=10)
 		l1.pack(side=tk.LEFT)  # 这里的side可以赋值为LEFT  RTGHT TOP  BOTTOM
 		self.xls_text = tk.StringVar()
-		tk.Entry(row1, textvariable=self.xls_text).pack(side=tk.RIGHT)
-
+		ent1 = tk.Entry(row1, textvariable=self.xls_text)
+		ent1.pack(side=tk.RIGHT)
+		ent1.bind("<Return>", self.submit)
 		row2 = tk.Frame(self)
 		row2.pack(fill="x")
 		tk.Button(row2, text="确认", command=self.on_click_yes).pack(side=tk.LEFT)
 		tk.Button(row2, text="取消", command=self.on_click_no).pack(side=tk.RIGHT)
+
 		pass
+
 	def on_click_yes(self):
 		global needCommit, commit
 		needCommit, commit = True, self.xls_text.get().lstrip()
 		self.quit()
 		self.destroy()
+	
 	def on_click_no(self):
 		global needCommit, commit
 		needCommit, commit = False, ""
+		self.quit()
+		self.destroy()
 	
+	def submit(self, ev = None):
+		self.on_click_yes()
+
 app = getcommit()
+app.wm_attributes('-topmost',1)
 app.mainloop()
 
 if needCommit:
@@ -73,7 +84,5 @@ if needCommit:
 		commit = "{:0>2d}/{:0>2d}/{:0>2d}_{:0>2d}:{:0>2d}:{:0>2d}".format(t.tm_year%100, t.tm_mon,t.tm_mday,t.tm_hour,t.tm_min,t.tm_sec)
 	os.system("git commit -m %s"%commit)
 
-	os.system("###### git push ######")
+	print("###### git push ######")
 	os.system("git push")
-
-os.system("pause")
