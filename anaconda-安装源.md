@@ -38,11 +38,12 @@ conda install -c [源] [包名]
 
 几个推荐的源
 
-```sh
+```bash
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
 ```
 
 > about link
-> 1. [Anaconda安装&使用@ubuntu](anaconda-%E5%AE%89%E8%A3%85%26%E4%BD%BF%E7%94%A8-ubuntu.md)
+>
+> 1. [Anaconda安装、使用-ubuntu](anaconda-%E5%AE%89%E8%A3%85%26%E4%BD%BF%E7%94%A8-ubuntu.md)
