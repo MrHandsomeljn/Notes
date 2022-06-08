@@ -94,3 +94,6 @@ if needCommit:
 
 	print("###### git push ######")
 	os.system("git push")
+
+app.destroy()
+root.destroy()
