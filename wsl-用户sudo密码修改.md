@@ -3,9 +3,8 @@
 管理员Powershell
 
 ```shell
-wsl.exe --user root #打开wsl
-passwd [a]			#设置用户[a]的密码
+#打开wsl
+wsl.exe --user root
+#设置用户[a]的密码
+passwd [a]
 ```
-
-
-
