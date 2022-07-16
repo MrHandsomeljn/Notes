@@ -5,7 +5,7 @@ import tkinter as tk
 import tkinter.messagebox
 
 NotesDirectoryPath = "E:/Codes/Notes"
-TyporaPath = "C:/Program Files/Typora"
+TyporaPath = "D:/Program Files/Typora"
 
 anilist = [0,'-','\\','|','/']
 
