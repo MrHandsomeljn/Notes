@@ -2,7 +2,7 @@
 
 1. 将视频导入剪映
 2. 左边【文本】-【智能字幕】-【开始识别】
-3. 识别完成之后关闭剪映，打开项目路径（我的是 ``C:\Users\12051\AppData\Local\JianyingPro\User%20Data\Projects\com.lveditor.draft``），按创建时间找到当前项目文件夹
+3. 识别完成之后关闭剪映，打开项目路径（我的是 ``C:\Users\12051\AppData\Local\JianyingPro\User Data\Projects\com.lveditor.draft``），按创建时间找到当前项目文件夹
 4. 找到当前项目文件夹，要用到的是 ``draft_content.json``
 5. 内容粘贴到[剪映 - 字幕导出工具](https://pansong291.gitee.io/web/html/tool/JianyingPro.html)
 6. 假如需要纯文本，参考[Excel隔行取内容方法](tips-Excel隔行取内容方法.md)
